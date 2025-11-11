@@ -12,7 +12,7 @@ services:
   web:
     image: web:v1
     ports:
-      "80:80"
+      - "80:80"
     depends_on:
       - catalogue
 
@@ -28,5 +28,9 @@ services:
     depends_on:
       - redis
       - catalogue
-      
+
+  mysql:
+    image: mysql:v1
+    
+
 
